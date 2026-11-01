@@ -42,9 +42,16 @@ export default function Home() {
                   </div>
                   <h3>{project.title}</h3>
                   <p>{project.summary}</p>
-                  <Link className="text-link" href={`/projects/${project.slug}`}>
-                    View case study <span aria-hidden="true">↗</span>
-                  </Link>
+                  <div className="project-links">
+                    <Link className="text-link" href={`/projects/${project.slug}`}>
+                      View case study <span aria-hidden="true">↗</span>
+                    </Link>
+                    {project.demo && (
+                      <a className="text-link" href={project.demo} target="_blank" rel="noreferrer">
+                        Live demo <span aria-hidden="true">↗</span>
+                      </a>
+                    )}
+                  </div>
                 </div>
               </article>
             ))}
@@ -116,11 +123,15 @@ export default function Home() {
           </header>
           <div className="cert-grid">
             {certificates.map((certificate, index) => (
-              <a className="cert-card" href={certificate.verify} target="_blank" rel="noreferrer" key={certificate.title}>
-                <span>0{index + 1} · VERIFIED CREDENTIAL</span>
+              <article className={`cert-card${certificate.featured ? " cert-card-featured" : ""}`} key={certificate.title}>
+                <span>0{index + 1} · {certificate.featured ? "FEATURED PROFESSIONAL CERTIFICATE" : "VERIFIED CREDENTIAL"}</span>
                 <h3>{certificate.title}</h3>
                 <p><span>{certificate.issuer}<br />{certificate.date}</span><b aria-hidden="true">↗</b></p>
-              </a>
+                <div className="cert-actions">
+                  <a href={certificate.verify} target="_blank" rel="noreferrer">Verify ↗</a>
+                  <a href={certificate.file} target="_blank" rel="noreferrer">View PDF ↗</a>
+                </div>
+              </article>
             ))}
           </div>
         </div>

@@ -11,6 +11,7 @@ export type Project = {
   highlights: { title: string; text: string }[];
   stack: string[];
   repository: string;
+  demo?: string;
   accent: "lime" | "violet" | "coral";
   visual: string;
 };
@@ -46,6 +47,7 @@ export const projects: Project[] = [
     ],
     stack: ["Next.js 15", "React 19", "TypeScript", "tRPC", "TanStack Query", "PostgreSQL", "Drizzle", "dnd-kit"],
     repository: "https://github.com/YuliaVorotintseva/taskflow",
+    demo: "https://vorotintseva-taskflow.vercel.app/",
     accent: "lime",
     visual: "kanban",
   },
@@ -79,6 +81,7 @@ export const projects: Project[] = [
     ],
     stack: ["Next.js 15", "React 19", "TypeScript", "NestJS", "tRPC", "PostgreSQL", "Redis", "Playwright"],
     repository: "https://github.com/YuliaVorotintseva/finance_tracker",
+    demo: "https://vorotintseva-finance-tracker.vercel.app/",
     accent: "violet",
     visual: "chart",
   },

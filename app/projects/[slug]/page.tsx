@@ -58,9 +58,16 @@ export default async function ProjectPage({ params }: Props) {
               <h2>From structure to shipped experience.</h2>
               <p>{project.role}</p>
               <p>{project.outcome}</p>
-              <a className="text-link" href={project.repository} target="_blank" rel="noreferrer">
-                View source on GitHub ↗
-              </a>
+              <div className="project-links">
+                {project.demo && (
+                  <a className="text-link" href={project.demo} target="_blank" rel="noreferrer">
+                    Open live demo ↗
+                  </a>
+                )}
+                <a className="text-link" href={project.repository} target="_blank" rel="noreferrer">
+                  View source on GitHub ↗
+                </a>
+              </div>
             </div>
           </div>
 

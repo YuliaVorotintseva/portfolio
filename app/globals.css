@@ -95,6 +95,7 @@ nav a:hover { color: var(--ink); }
 .project-copy h3 { margin: 0 0 1rem; font: 400 clamp(2.8rem, 5vw, 5.1rem)/.95 var(--display); letter-spacing: -.05em; }
 .project-copy > p { max-width: 540px; margin: 0 0 1.6rem; color: var(--muted); font-size: 1.04rem; }
 .text-link { display: inline-flex; align-items: center; gap: .55rem; padding-bottom: .3rem; border-bottom: 1px solid var(--ink); font-size: .78rem; font-weight: 700; }
+.project-links { display: flex; flex-wrap: wrap; gap: 1.4rem; }
 .project-visual { position: relative; aspect-ratio: 1.45; overflow: hidden; min-height: 390px; border: 1px solid var(--line); }
 .screenshot-visual { background: var(--surface); }
 .screenshot-visual > img { object-fit: contain; }
@@ -136,6 +137,12 @@ nav a:hover { color: var(--ink); }
 .cert-card > span { color: var(--muted); font-size: .65rem; letter-spacing: .1em; }
 .cert-card h3 { margin: auto 0 1rem; font: 400 1.8rem/1.1 var(--display); }
 .cert-card p { display: flex; justify-content: space-between; margin: 0; color: var(--muted); font-size: .72rem; }
+.cert-card-featured { grid-column: span 2; background: var(--accent); color: #171715; }
+.cert-card-featured:hover { background: #c7ff73; }
+.cert-card-featured h3 { max-width: 620px; font-size: clamp(2.3rem, 4vw, 4rem); }
+.cert-card-featured > span, .cert-card-featured p { color: #3d4a2b; }
+.cert-actions { display: flex; gap: 1.2rem; margin-top: 1.2rem; padding-top: .8rem; border-top: 1px solid currentColor; font-size: .7rem; font-weight: 700; }
+.cert-actions a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 .contact { padding: 8rem 0 3rem; background: var(--ink); color: var(--bg); }
 .contact .eyebrow::before { background: var(--accent); }
@@ -195,6 +202,7 @@ nav a:hover { color: var(--ink); }
   .skills-grid { grid-template-columns: 1fr 1fr; margin-top: 4rem; }
   .cert-grid { grid-template-columns: 1fr; }
   .cert-card { min-height: 190px; }
+  .cert-card-featured { grid-column: auto; }
   .contact { padding-top: 5rem; }
   .footer { gap: 2rem; flex-direction: column; }
   .case-hero { padding-top: 4rem; }

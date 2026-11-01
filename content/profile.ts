@@ -67,7 +67,24 @@ export const experience = [
   },
 ];
 
-export const certificates = [
+export type Certificate = {
+  title: string;
+  issuer: string;
+  date: string;
+  verify: string;
+  file: string;
+  featured?: boolean;
+};
+
+export const certificates: Certificate[] = [
+  {
+    title: "Meta Front-End Developer",
+    issuer: "Meta · Coursera Professional Certificate",
+    date: "October 2026",
+    verify: "https://coursera.org/verify/professional-cert/FB3B6TMXF5NP",
+    file: "/certificates/meta-frontend-development.pdf",
+    featured: true,
+  },
   {
     title: "Advanced React",
     issuer: "Meta · Coursera",
@@ -88,5 +105,12 @@ export const certificates = [
     date: "October 2026",
     verify: "https://coursera.org/verify/EF590HWNJJ9D",
     file: "/certificates/ux-ui-design.pdf",
+  },
+  {
+    title: "Programming in Python",
+    issuer: "Meta · Coursera",
+    date: "October 2026",
+    verify: "https://coursera.org/verify/D70EH1VU8R35",
+    file: "/certificates/programming-in-python.pdf",
   },
 ];
